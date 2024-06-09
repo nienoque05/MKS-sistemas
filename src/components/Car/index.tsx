@@ -1,4 +1,3 @@
-import { ContainerCar } from "../../pages/styles";
 import { ICar, IProducts } from "@/types/Types";
 import { IoMdCloseCircle } from "react-icons/io";
 import {
@@ -20,11 +19,11 @@ import { CartContext } from "@/Context/CartContext";
 import { FiX } from "react-icons/fi";
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
 import { motion } from "framer-motion";
+import { ContainerCar } from "@/Style/styles";
 
-export default function Car({ visible, count, setVisible }: ICar) {
+export default function Car({ visible,  setVisible }: ICar) {
   const { cart, total, addItemCart, removeItemCart } = useContext(CartContext);
-  useEffect(() => {
-  }, [total]);
+ 
   return (
     <ContainerCar visible={visible}>
       <CarHeader>

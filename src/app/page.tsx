@@ -1,15 +1,15 @@
 "use client";
 import CartProvider from "@/Context/CartContext";
-import HomePage from "@/pages/Home";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Home from "./pages/home";
 
-export default function Home() {
+export default function App() {
   const queryClient = new QueryClient();
 
   return (
     <CartProvider>
       <QueryClientProvider client={queryClient}>
-        <HomePage />
+        <Home />
       </QueryClientProvider>
     </CartProvider>
   );
